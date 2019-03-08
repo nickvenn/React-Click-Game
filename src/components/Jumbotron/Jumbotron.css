@@ -1,8 +1,5 @@
 /*JUMBOTRON*/
 .jumbotron {
-	background-blend-mode: lighten;
-    background-repeat: no-repeat;
-	background-position: center;
 	-webkit-background-size: cover;
 	background-size: cover;
 	margin-bottom: 0px;
@@ -10,7 +7,7 @@
 }
 
 .jumbotron h1 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: Impact, Charcoal, sans-serif;
 	font-size: 65px;
 	text-transform: uppercase;
 	font-weight: 900;

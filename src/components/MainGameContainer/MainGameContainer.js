@@ -6,7 +6,6 @@ import "./MainGameContainer.css";
 class MainGameContainer extends Component {
 	state = {
 		images,
-		message: "Click one of the team logos to begin!",
 		score: 0,
 		topScore: 0
 	};
@@ -15,6 +14,8 @@ class MainGameContainer extends Component {
 
 		const imageOrder = this.state.images;
 
+		//if image has already been clicked.  reorder image list and set clicked property to false
+		//reset score
 		if (clicked) {
 			imageOrder.forEach((image, index) => {
 				imageOrder[index].clicked = false;
@@ -22,9 +23,12 @@ class MainGameContainer extends Component {
 			return this.setState({
 				image: imageOrder.sort(() => Math.random() - 0.5),
 				message: "You Guessed Incorrectly!",
+
 				score: 0
 			})
 		}
+		//image has not been clicked so update score and image list:
+		//search through image list and set image clicked property to true
 		else {
 			imageOrder.forEach((image, index) => {
 				if (id === image.id) {
@@ -32,7 +36,8 @@ class MainGameContainer extends Component {
 				}
 			});
 
-			const { topScore, score } = this.state;
+			//grab current score and top score from state, add 1 to score
+			const {topScore, score } = this.state;
 			const newScore = score + 1;
 			const newTopScore = newScore > topScore ? newScore : topScore;
 

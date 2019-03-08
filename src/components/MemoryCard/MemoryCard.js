@@ -3,7 +3,7 @@ import "./MemoryCard.css";
 
 const MemoryCard = props => (
 	<div 
-	className="allCards col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" 
+	className="allCards col-md 6" 
 	key={props.id}
 	onClick={() => props.handleClick(props.id, props.clicked)}
 	>
