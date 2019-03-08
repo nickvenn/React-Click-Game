@@ -1,8 +1,8 @@
 {
-  "name": "clickygame",
+  "name": "React-Click-Game",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://m-wolowicz.github.io/React-Clicky-Game",
+  "homepage": "https://nickvenn.github.io/React-Click-Game",
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
