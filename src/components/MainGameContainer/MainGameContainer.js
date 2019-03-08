@@ -27,7 +27,7 @@ class MainGameContainer extends Component {
 				score: 0
 			})
 		}
-		//image has not been clicked so update score and image list:
+		//image has not been clicked so update score and change clicked property:
 		//search through image list and set image clicked property to true
 		else {
 			imageOrder.forEach((image, index) => {
@@ -39,6 +39,7 @@ class MainGameContainer extends Component {
 			//grab current score and top score from state, add 1 to score
 			const {topScore, score } = this.state;
 			const newScore = score + 1;
+			//newScore = true, topScore = false
 			const newTopScore = newScore > topScore ? newScore : topScore;
 
 			return this.setState({
